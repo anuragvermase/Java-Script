@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game-Guess the finger</title>
+</head>
+<body>
+    <p>How many fingers! I am holding up?</p>
+    <p><input type="text" id="guess"><button id="guessButton">Guess!</button></p>
+    <script type="text/javascript">
+        document.getElementById("guessButton").onclick = function(){
+            var randomNumber = Math.random();
+            randomNumber = randomNumber*6;
+            randomNumber = Math.floor(randomNumber);
+
+            if(document.getElementById("guess").value == randomNumber){
+                alert("Adbhut! badhiya guess kiya");
+            }else{
+                alert("Arey! ye nhi tha " + randomNumber + " tha");
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+
+     <div id="tweetDiv"></div> <!-- Display tweet -->
+
+    <script type="text/javascript">
+        var tweetString ="";  // Take empty variable
+        var tweet =["Good Morning!","Good Afternoon!","Good Night!","Sweet Dreams!"];
+        for(var i=0 ; i<tweet.length ; i++){
+           tweetString = tweetString + "<p>" + tweet[i] + "<\p>";
+        }
+        document.getElementById("tweetDiv").innerHTML = tweetString;
+    </script>
+</body>
+</html>

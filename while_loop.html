@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While loop</title>
+</head>
+<body>
+    <p>My Computer Guesses how many finger I hold !</p>
+    <p>
+        <select name="" id="guessesNumber">
+
+            <option value="">0</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+
+       </select>
+
+       <button id="guessesButton">guess!</button>
+    </p>
+
+    <script id="text/javascript">
+        document.getElementById("guessesButton").onclick = function(){
+            var myNumber = document.getElementById("guessesNumber").value;
+            var gotIt = false;
+            var numberOfGuesses = 1;
+
+            while(gotIt == false){
+                var guesses= Math.random();
+                guesses = guesses*6;
+                guesses = Math.floor(guesses);
+
+                if(myNumber == guesses){
+                    gotIt = true;
+                    alert("Got it ! You took " + numberOfGuesses +" Guesses")
+                }else{
+                    numberOfGuesses++;
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>
